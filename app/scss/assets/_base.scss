@@ -1,0 +1,47 @@
+/*base*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: url('https://i.pinimg.com/originals/c9/3c/ac/c93cac2f3b696f7d6018513a0d0f3330.png') center center no-repeat;
+  background-size: cover;
+  @include headerIsFixed(false);
+}
+
+.wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+.main {
+  display: table-row;
+  height: 100%;
+  height: 1px;
+}
+
+.clearfix {
+  &:after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+.transition {
+  transition: all 0.15s ease-in;
+}
+
+.myContainer {
+  position: relative;
+  max-width: gridValue('container');
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+
+/*END:base*/
