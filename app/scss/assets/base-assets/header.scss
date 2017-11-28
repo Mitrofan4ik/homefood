@@ -2,4 +2,55 @@
 .site-header {
     padding: 25px 0;
 }
+.header-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.location {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &-image {
+    width: 47px;
+    height: 48px;
+    object-fit: contain;
+  }
+  span {
+    font-family: $mainFontBold;
+    font-size: 24px;
+    color: color('mainColor');
+    margin-left: 24px;
+  }
+}
+.search-city {
+  position: relative;
+}
+.nav {
+  &-list {
+    &__item {
+
+    }
+    &__link {
+
+    }
+  }
+}
+.accounts {
+  &-list {
+    &__item {
+
+    }
+    &__link {
+
+    }
+  }
+}
+
+
 /*END:header*/
