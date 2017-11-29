@@ -1,11 +1,13 @@
 /*header*/
 .site-header {
-    padding: 25px 0;
+  padding: 25px 0;
+  box-shadow: 0 2px 4px 0 rgba(158, 158, 158, 0.5);
 }
 .header-content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .location {
   display: flex;
@@ -30,24 +32,109 @@
 }
 .search-city {
   position: relative;
+  width: 285px;
+  margin-left: 55px;
+  input {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 25px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: color('primary');
+    border: solid 1px color('inputBorder');
+    color: color('plaseholder');
+    &::-webkit-input-placeholder { 
+      color: color('plaseholder');
+    }
+    &::-moz-placeholder {
+      color: color('plaseholder');
+    }
+    &:-ms-input-placeholder { 
+      color: color('plaseholder');
+    }
+    &:-moz-placeholder { 
+      color: color('plaseholder');
+    }
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: color('plaseholder');
+  }
+}
+.serch-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 100%;
+  background-color: color('mainColor');
+  color: color('primary');
+  border-radius: 0 4px 4px 0;
+  font-size: 14px;
+
 }
 .nav {
   &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
     &__item {
-
+      margin: 0 17px;
     }
     &__link {
-
+      text-transform: uppercase;
+      font-family: $mainFontRegular;
+      font-size: 14px;
+      color: color('title');
+      position: relative;
+      padding: 9px 0;
+      @extend %default-transition;
+      &:hover {
+        color: color('mainColor');
+        &::before {
+          content: '';
+          left: 0%;
+          transform: translateX(0%);
+          width: 100%;
+          opacity: 1;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1%;
+        height: 4px;
+        background: color('mainColor');
+        opacity: 0;
+        @extend %default-transition;
+      }
     }
   }
 }
 .accounts {
   &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
     &__item {
-
+      margin: 0 23px;
     }
     &__link {
-
+      font-family: $mainFontRegular;
+      font-size: 14px;
+      color: color('mainColor');
+       @extend %default-transition;
+      &:hover {
+        color: color('title');
+      }
     }
   }
 }

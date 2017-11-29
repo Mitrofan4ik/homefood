@@ -1,0 +1,21 @@
+.introduce {
+  min-height: 378px;
+  background: #ccc;
+  &-content {
+    height: 378px;
+        border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(181, 181, 181, 0.5);
+  }
+  &-block {
+
+  }
+  &-item {
+    .image-holder {
+
+    }
+    .text-title {
+
+    }
+  }
+}

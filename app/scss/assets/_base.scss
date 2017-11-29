@@ -6,9 +6,16 @@ body {
 }
 
 h1 {
-  color: #fff;
-  font-family: $extraFontRegular;
-  font-size: 25px;
+  font-family: $extraFontBold;
+  font-size: 72px;
+  color: color('primary');
+}
+h2 {
+  font-family: $mainFontBold;
+  font-size: 24px;
+  color: color('title');
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .wrapper {
