@@ -1,21 +1,39 @@
 .introduce {
-  min-height: 378px;
-  background: #ccc;
+  margin-top: -125px;
   &-content {
-    height: 378px;
-        border-radius: 2px;
-    background-color: #ffffff;
+    min-height: 378px;
+    border-radius: 2px;
+    background-color: color('primary');
     box-shadow: 0 2px 4px 0 rgba(181, 181, 181, 0.5);
+    padding: 40px 0;
   }
   &-block {
-
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 25px;
   }
   &-item {
+    width: 25%;
+    padding: 0 40px;
+    text-align: center;
     .image-holder {
-
+      margin: 0 auto;
+      width: 136px;
+      height: 128px;
+      margin-bottom: 39px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
     }
     .text-title {
-
+      font-family: $mainFontRegular;
+      font-size: 16px;
+      color: color('title');
+      line-height: 20px;
     }
   }
 }
