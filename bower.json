@@ -1,5 +1,8 @@
 {
   "name": "gulp-project",
   "version": "1.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "slick-carousel": "slick-slide#^1.8.1"
+  }
 }
