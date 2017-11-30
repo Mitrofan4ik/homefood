@@ -8,6 +8,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 12px 0;
+    .slick-slide {
+      padding: 13px;
+    }
   }
   &-card {
     width: 262px;

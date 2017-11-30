@@ -11,10 +11,6 @@ $(document).ready(function() {
 
   $(".jsCategories").slick(option1);
 
-
-
-  $(".jsChefBox").slick('unslick');
-
   // rating stars
   var starList = $(".jsStarLIst");
   var stars = $(".jsStarItem");
@@ -26,26 +22,31 @@ $(document).ready(function() {
     $this.prevAll().addClass("secondary");
   });
 
-  chefSlider();
+ $(".jsChefBox").slick({
+   slidesToShow: 4,
+   variableWidth: true,
+   unslick: true,
+   dots: false,
+   arrows: false,
+   responsive: [
+      {
+       breakpoint: 1200,
+       settings: {
+         dots: true,
+         infinite: false,
+         unslick: false,
+         slidesToShow: 3,
+         variableWidth: true,
+         slidesToScroll: 1
+        }
+      }
+    ]
+  });  
 });
 
 $(window).resize(function() {
-  chefSlider();
-});
 
-function chefSlider() {
-  var windowWidth = $(window).width();
-  var chefBox = $(".chef-box");
-  if (windowWidth <= 1200) {
-    chefBox.addClass("jsChefBox");
-    $(".jsChefBox").slick({
-       slidesToShow: 4,
-    });
-  } else {
-    chefBox.removeClass("jsChefBox");
-    $(".jsChefBox").slick("unslick");
-  }
-}
+});
 
 
 
