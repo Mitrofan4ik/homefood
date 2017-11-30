@@ -2,7 +2,31 @@
 .site-header {
   padding: 25px 0;
   box-shadow: 0 2px 4px 0 rgba(158, 158, 158, 0.5);
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.2s linear;
+  &.fixed {
+    padding: 15px 0;
+    transition: all 0.2s linear;
+    background-color: rgba(104, 104, 104, 0.21);
+    // animation: fixedHeader 0.7s alternate forwards;
+  }
 }
+
+// @keyframes fixedHeader {
+//   from {
+//     transform: translateY(-100px);
+//   }
+//   to {
+//     transform: translateY(0);
+//   }
+// }
+
+
 .header-content {
   display: flex;
   align-items: center;
