@@ -12,9 +12,10 @@ $(document).ready(function() {
   $(".jsCategories").slick(option1);
 
   // rating stars
-  var starList = $(".jsStarLIst");
+  var starList = $(".jsStarList");
   var stars = $(".jsStarItem");
   starList.on("click", ".jsStarItem", function() {
+    console.log("click")
     var $this = $(this);
     stars.removeClass("selected");
     stars.removeClass("secondary");
