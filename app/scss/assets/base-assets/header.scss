@@ -131,7 +131,7 @@
       font-family: $mainFontRegular;
       font-size: 14px;
       color: color('mainColor');
-       @extend %default-transition;
+      @extend %default-transition;
       &:hover {
         color: color('title');
       }

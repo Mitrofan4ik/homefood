@@ -30,6 +30,10 @@
       color: #6d6b6a;
       padding: 6px 0;
       display: block;
+      @extend %default-transition;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     &.social {
       display: flex;
@@ -49,6 +53,10 @@
         position: relative;
         margin-bottom: 0;
         margin: 0 13px;
+        @extend %default-transition;
+        &:hover {
+          background: color('subText');
+        }
         .fa {
           position: absolute;
           top: 50%;
