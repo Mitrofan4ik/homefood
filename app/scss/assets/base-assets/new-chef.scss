@@ -1,0 +1,128 @@
+.chef {
+  padding: 25px 0;
+  &-content {
+
+  }
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+  &-card {
+    width: 262px;
+    padding: 20px 18px;
+    background-color: color('primary');
+    box-shadow: 0 0 9px 0 rgba(141, 139, 139, 0.5);
+    .chef-name {
+      font-family: $mainFontRegular;
+      font-size: 18px;
+      color: color('subTitle');
+      line-height: 20px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .image-holder {
+      width: 225px;
+      height: 225px;
+      margin: 0 auto;
+      margin-bottom: 17px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    .coment-title {
+      margin-left: 15px;
+      font-family: $extraFontRegular;
+      font-size: 14px;
+      color: color('mainColor');
+    }
+  }
+}
+
+.star-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0;
+  &__item {
+    display: inline-block;
+    font-size: 14px;
+    color: color('mainColor');
+    margin: 0 5px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    label {
+      position: relative;
+      cursor: pointer;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    &.selected {
+      color: color('mainColor');
+      transition: color .3s ease-out;
+      label {
+        &::before {
+          content: "\f005";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: color('mainColor');
+          font-family: "FontAwesome";
+          font-size: 13px;
+        }
+      }
+    }
+    
+    &.secondary{
+      color: color('mainColor');
+      label {
+        &::before {
+          content: "\f005";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: color('mainColor');
+          font-family: "FontAwesome";
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.chef-info-list {
+  margin-bottom: 0;
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    i {
+      font-size: 12px;
+      color: color('mainColor');
+    }
+    span {
+      font-family: $mainFontRegular;
+      font-size: 14px;
+      color: color('title');
+      margin-left: 10px;
+    }
+  }
+}
+
+
+
+
