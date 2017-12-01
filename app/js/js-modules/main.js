@@ -56,7 +56,7 @@ $(document).ready(function() {
 
   // rating stars
   var starList = $(".jsStarList");
-  var stars = $(".jsStarItem");
+  var stars = $(".jsStarItem").parent(".jsStarList");
   starList.on("click", ".jsStarItem", function() {
     console.log("click")
     var $this = $(this);
