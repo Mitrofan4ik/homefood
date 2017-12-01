@@ -14,10 +14,21 @@
     }
   }
   &-card {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    left: 50%;
+    transform: translateX(-50%);
     width: 262px;
     padding: 20px 18px;
     background-color: color('primary');
     box-shadow: 0 0 9px 0 rgba(141, 139, 139, 0.5);
+    transition: all 0.1s ease;
+    &-static {
+      position: relative;
+      width: 262px;
+      height: 355px;
+    }
     .chef-name {
       font-family: $mainFontRegular;
       font-size: 18px;
@@ -36,6 +47,10 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+    &:hover {
+      width: 282px;
+      padding: 20px 28px;
     }
   }
   &-rating {
@@ -110,10 +125,13 @@
 
 .chef-info-list {
   margin-bottom: 0;
+  overflow: hidden;
+  @extend %default-transition;
   &__item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 3px 0;
     i {
       font-size: 12px;
       color: color('mainColor');
@@ -123,6 +141,12 @@
       font-size: 14px;
       color: color('title');
       margin-left: 10px;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      display: none;
     }
   }
 }

@@ -66,6 +66,13 @@ $(document).ready(function() {
     $this.prevAll().addClass("secondary");
   });
 
+  // $(".jsChefCard").on("hover", function() {
+  //   $(".jsHidenInfo").fadeToggle("slow");
+  // });
+  $( ".jsChefCard" ).hover(function() {
+    $( this ).find( ".jsHidenInfo" ).fadeToggle("fast");
+  })
+
 });
 
 // $(window).resize(function() {
@@ -81,6 +88,7 @@ $(window).on('scroll', function() {
       $('#header').removeClass('fixed');
     }
 });
+
 
 
 
