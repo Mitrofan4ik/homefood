@@ -66,14 +66,16 @@ $(document).ready(function() {
     $this.prevAll().addClass("secondary");
   });
 
-  // $(".jsChefCard").on("hover", function() {
-  //   $(".jsHidenInfo").fadeToggle("slow");
-  // });
+  // hover on chief - card
   $( ".jsChefCard" ).hover(function() {
     $( this ).find( ".jsHidenInfo" ).fadeToggle("fast");
   })
 
+  $(".hamburger-menu").on("click", function() {
+    $(".bar").toggleClass("animate");
+  });
 });
+
 
 // $(window).resize(function() {
 

@@ -12,19 +12,59 @@
   &.fixed {
     padding: 15px 0;
     transition: all 0.2s linear;
-    // background-color: rgba(104, 104, 104, 0.21);
-    // animation: fixedHeader 0.7s alternate forwards;
   }
 }
 
-// @keyframes fixedHeader {
-//   from {
-//     transform: translateY(-100px);
-//   }
-//   to {
-//     transform: translateY(0);
-//   }
-// }
+.hamburger-menu {
+  display: none;
+  width: 40px;
+	height: 40px;
+  cursor: pointer;
+  @media only screen and (max-width: 1200px) {
+    display: block;
+  }
+}
+.bar {
+  width: 40px;
+  height: 4px;
+  position: relative;
+	transform: translateY(19px);
+	background: color('mainColor');
+	transition: all 0ms 300ms;
+  &.animate {
+    background: rgba(255, 255, 255, 0); 
+    &::before {
+      bottom: 0;
+      transform: rotate(-45deg);
+      transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+    }
+    &::after {
+      top: 0;
+      transform: rotate(45deg);
+      transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+  &::before {
+    content: "";
+    width: 40px;
+	  height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    background: color('mainColor');
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  &::after {
+    content: "";
+    width: 40px;
+  	height: 4px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: color('mainColor');
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
 
 
 .header-content {
@@ -32,6 +72,9 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 .location {
   display: flex;

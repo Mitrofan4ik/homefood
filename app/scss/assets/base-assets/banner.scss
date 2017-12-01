@@ -18,9 +18,10 @@
   }
   h1 {
     position: absolute;
+    width: 100%;
+    text-align: center;
     top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     background: linear-gradient(left, rgba(255,255,255,1) 0%, rgba(115,162,6,1) 30%, rgba(255,228,133,1) 69%, rgba(255,255,255,1) 100%);
     background-size: 3200px 200px;
     color: transparent;
