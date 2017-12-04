@@ -13,6 +13,12 @@ h1 {
   font-family: $extraFontBold;
   font-size: 72px;
   color: color('primary');
+  @media only screen and (max-width: 768px) {
+    font-size: 60px;
+  }
+  @media only screen and (max-width: 480px) {
+    font-size: 32px;
+  }
 }
 h2 {
   font-family: $mainFontBold;

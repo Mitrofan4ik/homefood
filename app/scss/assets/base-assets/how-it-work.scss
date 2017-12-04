@@ -14,16 +14,31 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 25px;
+    @media only screen and (max-width: 480px) {
+      padding: 0 15px;
+    }
   }
   &-item {
     width: 25%;
     padding: 0 40px;
     text-align: center;
+    @media only screen and (max-width: 1200px) {
+      width: 50%;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      padding: 0;
+    }
     .image-holder {
       margin: 0 auto;
       width: 136px;
       height: 128px;
       margin-bottom: 39px;
+      @media only screen and (max-width: 480px) {
+        width: 100px;
+        height: 94px;
+        margin-bottom: 20px;
+      }         
       img {
         height: 100%;
         width: 100%;

@@ -7,6 +7,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  @media only screen and (max-width: 768px) {
+    height: 450px;
+  }
+  @media only screen and (max-width: 480px) {
+    height: 370px;
+  }
   &:before{
     content: '';
     position: absolute;
