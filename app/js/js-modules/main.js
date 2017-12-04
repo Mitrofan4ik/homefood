@@ -55,16 +55,16 @@ $(document).ready(function() {
   // $(".jsCustomer").slick();
 
   // rating stars
-  var starList = $(".jsStarList");
-  var stars = $(".jsStarItem").parent(".jsStarList");
-  starList.on("click", ".jsStarItem", function() {
-    console.log("click")
+  $(".jsStarItem input").on("click", function(e) {
     var $this = $(this);
-    stars.removeClass("selected");
-    stars.removeClass("secondary");
-    $this.addClass("selected");
-    $this.prevAll().addClass("secondary");
+    var starContainer = $this.closest('.jsStarList');        
+    var curentLi = $this.closest('.jsStarItem');
+
+    starContainer.find('li').removeClass('selected').removeClass('secondary');      
+    curentLi.addClass('selected');
+    curentLi.prevAll().addClass("secondary");
   });
+  
 
   // hover on chief - card
   $( ".jsChefCard" ).hover(function() {
