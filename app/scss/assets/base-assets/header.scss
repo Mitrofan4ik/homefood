@@ -66,25 +66,61 @@
   }
 }
 
-
 .header-content {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
   @media only screen and (max-width: 1200px) {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    padding: 10px 10px;
+    width: 270px;
+    min-height: 100vh;
+    background: #fff;
+    box-shadow: 2px 4px 4px 0 rgba(158, 158, 158, .5);
+    animation: closeMenu 0.5s alternate linear forwards;
+    &.open-menu {
+      display: block;
+      animation: openMenu 0.5s alternate linear forwards;
+    }
+   
+  }   
+}
+@keyframes openMenu {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes closeMenu {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-1000px);
   }
 }
 .location {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  @media only screen and (max-width: 1200px) {
+    display: block;
+  }
 }
 .logo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  @media only screen and (max-width: 1200px) {
+    margin: 0 auto 10px;
+    justify-content: center;
+  }
   &-image {
     width: 47px;
     height: 48px;
@@ -101,6 +137,12 @@
   position: relative;
   width: 285px;
   margin-left: 55px;
+  @media only screen and (max-width: 1200px) {
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
   input {
     width: 100%;
     padding-right: 40px;
@@ -152,8 +194,14 @@
     margin-bottom: 0;
     &__item {
       margin: 0 17px;
+      @media only screen and (max-width: 1200px) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
     }
     &__link {
+      display: inline-block;
       text-transform: uppercase;
       font-family: $mainFontRegular;
       font-size: 14px;
@@ -193,18 +241,25 @@
     margin-bottom: 0;
     &__item {
       margin: 0 23px;
+      @media only screen and (max-width: 1200px) {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+      }
     }
     &__link {
       font-family: $mainFontRegular;
       font-size: 14px;
       color: color('mainColor');
-      @extend %default-transition;
+      display: inline-block;
+      @extend %default-transition; 
+      @media only screen and (max-width: 1200px) {
+        padding: 9px 0;
+      }
       &:hover {
         color: color('title');
       }
     }
   }
 }
-
-
 /*END:header*/
