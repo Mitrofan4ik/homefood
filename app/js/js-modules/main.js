@@ -6,7 +6,19 @@ $(document).ready(function() {
     infinite: true,
     slidesToShow: 3,
     speed: 300,
-    slidesToScroll: 1
+    variableWidth: true,
+    slidesToScroll: 1,
+    responsive: [
+    {
+      breakpoint: 1201,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: false
+      }
+    }]
   }
   var optionChefSlider = {
     slidesToShow: 4,
