@@ -33,33 +33,58 @@ $(document).ready(function() {
     $(".bar").toggleClass("animate");
     $(".jsOpenMobileMenu").toggleClass("open-menu");
   });
-
-  customerSlider();
+  // Customer slider
+  responsiveSlider();
 });
 
-function customerSlider() {
+function responsiveSlider() {
+  // Customer slider
   var optionCustomersSlider = {
     pageDots: false,
     contain: true,
     freeScroll: true,
     initialIndex: 2,
-    cellSelector: ".customers-item",
-  }
+    cellSelector: ".customers-item"
+  };
 
   var windowWidth = $(window).width();
   var $carousel = $(".jsCustomer").flickity();
   var isFlickity = true;
+
   if (windowWidth >= 1200 && isFlickity) {
     $carousel.flickity("destroy");
   } else {
     $carousel.flickity(optionCustomersSlider);
   }
+
   isFlickity = !isFlickity;
+
+  var optionChefSlider = {
+    pageDots: false,
+    contain: true,
+    freeScroll: true,
+    initialIndex: 2,
+    cellSelector: ".chef-card"
+  };
+
+  var $carouselChief = $(".jsChefSlider").flickity();
+  var isFlickityChief = true;
+
+  if (windowWidth >= 1200 && isFlickity) {
+    $carouselChief.flickity("destroy");
+  } else {
+    $carouselChief.flickity(optionChefSlider);
+  }
+
+  isFlickityChief = !isFlickity;
+
 }
 
 $(window).resize(function() {
-  customerSlider();
+  // Customer slider
+  responsiveSlider();
 });
+
 //Animated header
 $(window).on('scroll', function() {
     var scroll = $(window).scrollTop();

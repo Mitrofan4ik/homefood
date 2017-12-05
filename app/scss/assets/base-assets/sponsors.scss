@@ -1,6 +1,9 @@
 .sponsors {
-  padding: 16px 0 72px;
+  padding: 40px 0 72px;
   background: #fff;
+  @media only screen and (max-width: 768px) {
+    padding: 40px;
+  }
   &-block {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +11,12 @@
     justify-content: space-around;
     a {
       opacity: 1;
+      width: 200px;
+      margin: 0 10px;
       @extend %default-transition;
+      @media only screen and (max-width: 910px) {
+        margin-bottom: 10px;
+      }
       &:hover {
         opacity: 0.7;
       }
