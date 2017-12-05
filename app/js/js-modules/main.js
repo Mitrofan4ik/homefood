@@ -62,9 +62,18 @@ $(document).ready(function() {
   //   ]
   // }
 
-  $(".jsCategories").slick(optionCategoriesSlider);
-  $(".jsChefBox").slick(optionChefSlider);  
+  // $(".jsCategories").slick(optionCategoriesSlider);
+  // $(".jsChefBox").slick(optionChefSlider);  
   // $(".jsCustomer").slick();
+
+  var $carousel = $(".jsCategories").flickity({
+    pageDots: false,
+    initialIndex: 2,
+    contain: true,
+    freeScroll: true,
+    cellSelector: ".categories-slider__slide"
+  });
+
 
   // rating stars
   $(".jsStarItem input").on("click", function(e) {

@@ -8,6 +8,7 @@
     &__slide {
       position: relative;
       overflow: hidden;
+      margin: 0 5px;
       .image-holder {
         width: 378px;
         height: 258px;
@@ -32,7 +33,7 @@
     }
   }
 
-  .slick-arrow {
+  .flickity-prev-next-button {
     top: 50%;
     position: absolute;
     transform: translateY(-50%);
@@ -41,23 +42,26 @@
     font-size: 0;
     width: 23px;
     height: 64px;
-  }
-  .slick-prev {
-    left: -30px;
-    &::before {
-      content: "\f104";
-      font-family: "FontAwesome";
-      font-size: 64px;
-      color: color('plaseholder');
+    &.previous {
+      left: -35px;
+      &::before {
+        content: "\f104";
+        font-family: "FontAwesome";
+        font-size: 64px;
+        color: color('plaseholder');
+      }
     }
-  }
-  .slick-next {
-    right: -30px;
-    &::before {
-      content: "\f105";
-      font-family: "FontAwesome";
-      font-size: 64px;
-      color: color('plaseholder');
+    &.next {
+      right: -35px;
+      &::before {
+        content: "\f105";
+        font-family: "FontAwesome";
+        font-size: 64px;
+        color: color('plaseholder');
+      }
+    }
+    svg {
+      display: none;
     }
   }
 }
