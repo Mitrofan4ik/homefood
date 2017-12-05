@@ -10,10 +10,19 @@
     justify-content: space-around;
     align-items: stretch;
     padding: 50px 0;
+    width: 100%;
+    .flickity-viewport {
+      width: 100%;
+    }
+    .flickity-prev-next-button {
+      display: none;
+    }
   }
   &-item {
     width: 270px;
+    margin: 0 25px;
     text-align: center;
+    box-sizing: content-box;
     .par {
       font-family: $extraFontRegular;
       font-size: 20px;
@@ -39,3 +48,5 @@
     font-size: 20px;
   }
 }
+
+// @media only screen and (max-width: 1200px)

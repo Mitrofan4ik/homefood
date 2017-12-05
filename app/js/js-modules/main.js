@@ -1,79 +1,17 @@
 //= js-assets/functions
 
 $(document).ready(function() {
-
+  
   var optionCategoriesSlider = {
-    infinite: true,
-    slidesToShow: 3,
-    speed: 300,
-    variableWidth: true,
-    slidesToScroll: 1,
-    responsive: [
-    {
-      breakpoint: 1201,
-      settings: {
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false
-      }
-    }]
-  }
-  var optionChefSlider = {
-    slidesToShow: 4,
-    variableWidth: true,
-    unslick: true,
-    dots: false,
-    arrows: false,
-    responsive: [
-      {
-       breakpoint: 1200,
-       settings: {
-         dots: true,
-         infinite: false,
-         unslick: false,
-         slidesToShow: 3,
-         variableWidth: true,
-         slidesToScroll: 1
-        }
-      }
-    ]
-  }
-  // var optionCustomerSlider = {
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   variableWidth: true,
-  //   // unslick: true,
-  //   dots: false,
-  //   arrows: false,
-  //   responsive: [
-  //     {
-  //      breakpoint: 1200,
-  //      settings: {
-  //        dots: true,
-  //        infinite: false,
-  //        unslick: false,
-  //        slidesToShow: 3,
-  //        variableWidth: true,
-  //        slidesToScroll: 1
-  //       }
-  //     }
-  //   ]
-  // }
-
-  // $(".jsCategories").slick(optionCategoriesSlider);
-  // $(".jsChefBox").slick(optionChefSlider);  
-  // $(".jsCustomer").slick();
-
-  var $carousel = $(".jsCategories").flickity({
     pageDots: false,
     initialIndex: 2,
     contain: true,
     freeScroll: true,
     cellSelector: ".categories-slider__slide"
-  });
+  }
+  
 
+  $(".jsCategories").flickity(optionCategoriesSlider);
 
   // rating stars
   $(".jsStarItem input").on("click", function(e) {
@@ -86,7 +24,6 @@ $(document).ready(function() {
     curentLi.prevAll().addClass("secondary");
   });
   
-
   // hover on chief - card
   $( ".jsChefCard" ).hover(function() {
     $( this ).find( ".jsHidenInfo" ).fadeToggle("fast");
@@ -96,12 +33,33 @@ $(document).ready(function() {
     $(".bar").toggleClass("animate");
     $(".jsOpenMobileMenu").toggleClass("open-menu");
   });
+
+  customerSlider();
 });
 
+function customerSlider() {
+  var optionCustomersSlider = {
+    pageDots: false,
+    contain: true,
+    freeScroll: true,
+    initialIndex: 2,
+    cellSelector: ".customers-item",
+  }
 
-// $(window).resize(function() {
+  var windowWidth = $(window).width();
+  var $carousel = $(".jsCustomer").flickity();
+  var isFlickity = true;
+  if (windowWidth >= 1200 && isFlickity) {
+    $carousel.flickity("destroy");
+  } else {
+    $carousel.flickity(optionCustomersSlider);
+  }
+  isFlickity = !isFlickity;
+}
 
-// });
+$(window).resize(function() {
+  customerSlider();
+});
 //Animated header
 $(window).on('scroll', function() {
     var scroll = $(window).scrollTop();
