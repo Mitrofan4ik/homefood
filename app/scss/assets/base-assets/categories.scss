@@ -42,6 +42,9 @@
     font-size: 0;
     width: 23px;
     height: 64px;
+    @media only screen and (max-width: 1250px) {
+      display: none;
+    }
     &.previous {
       left: -35px;
       &::before {

@@ -9,11 +9,17 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 12px 0;
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+    }
     .slick-slide {
       padding: 13px;
     }
     .flickity-viewport {
       width: 100%;
+    }
+    .flickity-prev-next-button {
+      display: none;
     }
   }
   &-card {
@@ -31,6 +37,12 @@
       position: relative;
       width: 262px;
       height: 355px;
+      @media only screen and (max-width: 1200px) {
+        margin-bottom: 50px; 
+      }
+      @media only screen and (max-width: 768px) {
+        margin: 0 10px 50px;
+      }
     }
     .chef-name {
       font-family: $mainFontRegular;
@@ -54,6 +66,7 @@
     &:hover {
       width: 282px;
       padding: 20px 28px;
+      z-index: 999;
     }
   }
   &-rating {
@@ -96,30 +109,20 @@
     &.selected {
       color: color('mainColor');
       transition: color .3s ease-out;
-      label {
+      .fa {
         &::before {
           content: "\f005";
-          position: absolute;
-          top: 0;
-          left: 0;
           color: color('mainColor');
-          font-family: "FontAwesome";
-          font-size: 13px;
         }
       }
     }
     
     &.secondary{
       color: color('mainColor');
-      label {
+      .fa {
         &::before {
           content: "\f005";
-          position: absolute;
-          top: 0;
-          left: 0;
           color: color('mainColor');
-          font-family: "FontAwesome";
-          font-size: 13px;
         }
       }
     }

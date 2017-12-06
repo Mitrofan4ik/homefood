@@ -76,9 +76,9 @@
   justify-content: space-between;
   @media only screen and (max-width: 1200px) {
     display: block;
-    position: absolute;
-    top: 40px;
-    left: 0;
+    position: fixed;
+    top: 50px;
+    left: 15px;
     padding: 10px 10px;
     width: 270px;
     min-height: 100vh;
