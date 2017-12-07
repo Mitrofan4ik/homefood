@@ -31,6 +31,12 @@
         text-transform: uppercase;
       }
     }
+    .flickity-page-dots {
+      display: none;
+      @media only screen and (max-width: 1250px) {
+        display: block;
+      }
+    }
   }
 
   .flickity-prev-next-button {

@@ -3,7 +3,7 @@
 $(document).ready(function() {
   
   var optionCategoriesSlider = {
-    pageDots: false,
+    pageDots: true,
     initialIndex: 2,
     contain: true,
     freeScroll: true,
@@ -42,9 +42,9 @@ function responsiveSlider() {
   // Customer slider
   var optionCustomersSlider = {
     pageDots: false,
-    contain: true,
+    contain: false,
     freeScroll: true,
-    initialIndex: 2,
+    initialIndex: 3,
     cellSelector: ".customers-item"
   };
 
