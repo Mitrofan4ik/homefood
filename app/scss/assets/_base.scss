@@ -44,6 +44,7 @@ h2 {
   z-index: 9;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  background: #fff;
 }
 
 .clearfix {
@@ -66,4 +67,16 @@ h2 {
   @extend .clearfix;
 }
 
+.double-content {
+  margin-top: 98px;
+  display: flex;
+  padding: 35px 0;
+  &__left {
+    width: 230px;
+  }
+  &__right {
+    flex: 1 1 auto;
+    padding: 0 15px;
+  }
+}
 /*END:base*/

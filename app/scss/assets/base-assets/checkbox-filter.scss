@@ -1,0 +1,47 @@
+.checkbox-title {
+  font-family: $mainFontRegular;
+  font-size: 20px;
+  color: color('mainColor');
+  margin-bottom: 11px;
+  display: block;
+}
+.checkbox-list {
+  margin-bottom: 50px;
+  &__item {
+    font-family: $mainFontRegular;
+    font-size: 14px;
+    color: color('subTitle');
+    padding: 4px 0;
+  }
+}
+
+.checkbox-lable {
+  position: relative;
+  span {
+    margin-left: 8px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      border: solid 1px color('plaseholder');
+    }
+    .fa {
+      color: color('mainColor');
+      margin: 0 3px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+input[type=checkbox]:checked + span::before {
+  background: url(../img/check.svg) no-repeat center center;
+  background-size: 9px;
+}
