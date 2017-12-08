@@ -35,7 +35,10 @@ $(document).ready(function() {
   });
   // Customer slider
   responsiveSlider();
-  // responsiveChefSlider();
+
+  $(".jsLikeHeard").on("click", function () {
+    $(this).toggleClass("active");
+  })
 });
 
 function responsiveSlider() {

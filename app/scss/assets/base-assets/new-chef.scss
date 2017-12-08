@@ -134,19 +134,20 @@
   overflow: hidden;
   @extend %default-transition;
   &__item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    display: block;
     padding: 3px 0;
     i {
       font-size: 12px;
       color: color('mainColor');
+      width: 15px;
+      height: 15px;
+      display: inline-block;
     }
     span {
       font-family: $mainFontRegular;
       font-size: 14px;
       color: color('title');
-      margin-left: 10px;
+      margin-left: 5px;
     }
     &:nth-child(2) {
       display: none;

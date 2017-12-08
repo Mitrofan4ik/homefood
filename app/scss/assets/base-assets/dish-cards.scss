@@ -23,6 +23,20 @@
     flex: 1 1;
     padding: 0 18px 0 24px;
   }
+  &__like {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    font-size: 24px;
+    color: color('primary');
+    opacity: 0.42;
+    cursor: pointer;
+    @extend %default-transition;
+    &.active {
+      opacity: 1;
+      @extend %default-transition;
+    }
+  }
 }
 .chef-info-list {
   &.dish-card-info-list {
