@@ -127,8 +127,7 @@ function checkboxAccordion() {
   var windowWidth = $(window).width();
   if (windowWidth <= 1175) {
     $(".checkbox-open").on("click", function() {
-      console.log("click");
-      $(this).parent().siblings().slideToggle();
+      $(this).parent().siblings().fadeToggle(200);
     });
   } 
 }
