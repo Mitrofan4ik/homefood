@@ -71,8 +71,24 @@ h2 {
   margin-top: 98px;
   display: flex;
   padding: 35px 0;
+  position: relative;
   &__left {
     width: 230px;
+    @extend %default-transition;
+    @media only screen and (max-width: 1175px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      background: color('primary');
+      height: 100%;
+      transform: translateX(-200px);
+    }
+    &.show-filter {
+      transform: translateX(0);
+      box-shadow: 4px 4px 9px -4px rgba(141, 139, 139, .5);
+      @extend %default-transition;
+    }
   }
   &__right {
     flex: 1 1 auto;

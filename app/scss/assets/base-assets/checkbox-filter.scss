@@ -7,6 +7,9 @@
 }
 .checkbox-list {
   margin-bottom: 50px;
+  @media only screen and (max-width: 1175px) {
+    display: none;
+  }
   &__item {
     font-family: $mainFontRegular;
     font-size: 14px;
@@ -44,4 +47,42 @@
 input[type=checkbox]:checked + span::before {
   background: url(../img/check.svg) no-repeat center center;
   background-size: 9px;
+}
+
+.checkbox-block {
+  position: relative;
+  
+}
+.arrow {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: color('mainColor');
+  font-size: 25px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+  @media only screen and (max-width: 1175px) {
+    display: block;
+  }
+}
+.checkbox-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.checkbox-open {
+  display: none;
+  i {
+    color: color('mainColor');
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 1175px) {
+    display: block;
+  }
 }
