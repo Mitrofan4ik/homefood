@@ -26,6 +26,12 @@
   @media only screen and (max-width: 1200px) {
     display: block;
   }
+  @media only screen and (max-width: 1175px) {
+    margin-left: 15px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-left: 0;
+  }
 }
 .bar {
   width: 30px;

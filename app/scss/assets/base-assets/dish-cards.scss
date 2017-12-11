@@ -11,11 +11,30 @@
   @media only screen and (max-width: 1175px) {
     width: 100%;
   }
+  @media only screen and (max-width: 768px) {
+    width: 270px;
+    margin: 0 20px 30px;
+  }
+  @media only screen and (max-width: 480px) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  @media only screen and (max-width: 320px) {
+    width: 100%;
+  }
+  &-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   &__image {
     width: 235px;
     height: 226px;
     position: relative;
     display: block;
+    @media only screen and (max-width: 320px) {
+      width: 100%;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -25,6 +44,14 @@
   &__content {
     flex: 1 1;
     padding: 0 18px 0 24px;
+    @media only screen and (max-width: 768px) {
+      flex: 1 1 100%;
+      padding: 10px 0 0;
+    }
+    p {
+      max-height: 48px;
+      overflow: hidden;
+    }
   }
   &__like {
     position: absolute;
@@ -66,11 +93,17 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media only screen and (max-width: 910px) {
+      width: 200px;
+    }
   }
   &__price {
     font-family: $mainFontBold;
     font-size: 24px;
     color: color('mainColor');
+    @media only screen and (max-width: 768px) {
+      margin-left: auto;
+    }
   }
 }
 
@@ -85,6 +118,10 @@
     color: color('subTitle');
     margin-right: 19px;
     display: block;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
   }
   .chef-rating {
     margin-bottom: 0;
@@ -150,4 +187,7 @@
   font-size: 14px;
   color: color('primary');
   padding: 5px 38px;
+  @media only screen and (max-width: 768px) {
+    padding: 5px 20px;
+  }
 }

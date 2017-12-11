@@ -88,6 +88,10 @@ h2 {
       transform: translateX(-300px);
       padding-top: 75px;
     }
+    @media only screen and (max-width: 320px) {
+      left: -15px;
+      padding: 75px 0 0 15px;
+    }
     &.show-filter {
       transform: translateX(0);
       box-shadow: 4px 4px 9px -4px rgba(141, 139, 139, .5);
@@ -97,6 +101,9 @@ h2 {
   &__right {
     flex: 1 1 auto;
     padding: 0 15px;
+    @media only screen and (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
 
