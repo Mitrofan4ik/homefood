@@ -25,7 +25,7 @@ $(document).ready(function() {
   
   // hover on chief - card
   $( ".jsChefCard" ).hover(function() {
-    $( this ).find( ".jsHidenInfo" ).fadeToggle("fast");
+    $( this ).find( ".jsHidenInfo" ).fadeToggle(1);
   })
 
   $(".hamburger-menu").on("click", function() {
